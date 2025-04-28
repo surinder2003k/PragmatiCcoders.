@@ -1,0 +1,19 @@
+.Resourcesmain{
+    background: url(../assets/blur.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.Resourcecenter{
+    font-family:  'Verdana',' Geneva', 'Tahoma', 'sans-serif';
+    letter-spacing: 4px;
+
+}
+.Resourcecenter::before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    position: absolute ;
+    right: 280px;
+    top: 10px;
+    background-color: #019E6D;
+}

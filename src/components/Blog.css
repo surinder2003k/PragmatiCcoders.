@@ -1,0 +1,19 @@
+.Blogmain{
+    background: url(../assets/blur.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.Blogcenter{
+    font-family:  'Verdana',' Geneva', 'Tahoma', 'sans-serif';
+    letter-spacing: 4px;
+
+}
+.Blogcenter::before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    position: absolute ;
+    right: 250px;
+    top: 10px;
+    background-color: #019E6D;
+}

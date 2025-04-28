@@ -1,0 +1,19 @@
+.Casestudiesmain{
+    background: url(../assets/blur.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.Casestudiescenter{
+    font-family:  'Verdana',' Geneva', 'Tahoma', 'sans-serif';
+    letter-spacing: 4px;
+
+}
+.Casestudiescenter::before{
+    content: '';
+    width: 40px;
+    height: 2px;
+    position: absolute ;
+    right: 290px;
+    top: 10px;
+    background-color: #019E6D;
+}

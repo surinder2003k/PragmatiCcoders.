@@ -1,0 +1,22 @@
+.servicesmain{
+        background: url(../assets/blur.png);
+        background-size: cover;
+        /* background-attachment: fixed; */
+}
+.servicecenter{
+        font-family:  'Verdana',' Geneva', 'Tahoma', 'sans-serif';
+        letter-spacing: 4px;
+
+}
+.servicecenter::before{
+        content: '';
+        width: 40px;
+        height: 2px;
+        position: absolute ;
+        right: 270px;
+        top: 10px;
+        background-color: #019E6D;
+}
+.sericestitle:hover{
+        background-color: #019e6c1b;
+}

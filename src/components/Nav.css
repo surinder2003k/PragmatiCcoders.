@@ -1,0 +1,159 @@
+.navmain{
+    background-color: rgba(0, 0, 0, 0.773);
+    backdrop-filter: blur(7px);
+    z-index: 30;
+}
+.contactbtn{
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+@media (max-width:650px){
+    /* .tabs{
+        display: hidden;
+    } */
+    .tabs{
+        background-color: red;
+        display: none;
+    }
+    .contactbtn{
+        display: none;
+    }
+    .btndiv{
+        width: 100px;
+        position: absolute;
+        right: 30px;        
+    }
+    .btndiv i{
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .manubtn{
+        font-size: 30px;
+        right: 10px;
+        position: absolute;
+        font-weight: lighter;
+        display:block;
+
+    }
+    .logopic{
+        /* border: 1px solid yellow; */
+        position: absolute;
+        left: 30px;
+
+    }
+    /* .mainhome{
+        width: 400px;
+    } */
+
+}
+.profilediv{
+    background-color: rgba(0, 0, 0, 0.518);
+}
+
+.AboutUs{
+    position: relative;
+}
+.AboutUs::after{
+    content: '';
+    width: 95px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 0;
+    background-color: #009F6D;
+}
+.AboutUs:hover::after{
+    height: 2px;
+}
+
+
+.CaseStudies{
+    position: relative;
+}
+.CaseStudies::after{
+    content: '';
+    width: 105px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 8px;
+    background-color: #009F6D;
+}
+.CaseStudies:hover::after{
+    height: 2px;
+}
+
+.Industries{
+    position: relative;
+}
+.Industries::after{
+    content: '';
+    width: 85px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 8px;
+    background-color: #009F6D;
+}
+.Industries:hover::after{
+    height: 2px;
+}
+.Services{
+    position: relative;
+}
+.Services::after{
+    content: '';
+    width: 70px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 8px;
+    background-color: #009F6D;
+}
+.Services:hover::after{
+    height: 2px;
+}
+.Blog{
+    position: relative;
+}
+.Blog::after{
+    content: '';
+    width: 40px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 8px;
+    background-color: #009F6D;
+}
+.Blog:hover::after{
+    height: 2px;
+}
+
+.Resources{
+    position: relative;
+}
+.Resources::after{
+    content: '';
+    width: 85px;
+    height: 0px;
+    position: absolute;
+    bottom: -18px;
+    left: 8px;
+    background-color: #009F6D;
+}
+.Resources:hover::after{
+    height: 2px;
+}
+
+.Activelink {
+    color:  #009F6D;
+}
+.drops {
+    background-color: rgba(0, 0, 0, 0.711);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid gray;
+} 
+.drops h1:hover{
+    color: #009F6D;
+    cursor: pointer;
+}
