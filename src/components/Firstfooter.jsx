@@ -3,7 +3,10 @@ import emailjs from '@emailjs/browser'
 const Firstfooter = () => {
   function handlecontectus(e){
     e.preventDefault()
-    emailjs.sendForm('service_032j0sm','template_ls2l7zq',e.target,'oPKf7ds0EAMHvJcM-')
+    const publicKey = process.env.PUBLIC_KEY;
+    const serviceID = process.env.SERVICE_ID;
+    const templateID = process.env.TEMPLATE_ID;
+    emailjs.sendForm(serviceID,templateID,e.target,publicKey)
     .then((result) => {
       alert('Message sent Successfully');
       e.target.reset();
