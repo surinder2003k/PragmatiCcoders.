@@ -95,7 +95,7 @@ function handleResources(){
         </NavLink>
         </div>
         <div className='tabs'>
-        <ul className='tabsul flex gap-4 text-[2.5vh] font-bold'>
+        <ul className='tabsul flex gap-2 text-[2.5vh] font-semibold'>
             <li onClick={()=>setServicesdrop(false)} onMouseOver={handleServicesdrop} className='Services p-2 hover:text-[#009F6D] ' ><NavLink  className={({isActive})=>isActive?'Activelink':'link'} to={'/services'}>Services</NavLink></li>
             {Servicesdrop && (
               <div className=' drops  absolute w-[217vh] h-[400px] flex gap-2 items-center justify-evenly left-0  top-[80px]'>

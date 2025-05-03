@@ -1,6 +1,16 @@
 import React from 'react'
-
+import emailjs from '@emailjs/browser'
 const Firstfooter = () => {
+  function handlecontectus(e){
+    e.preventDefault()
+    emailjs.sendForm('service_032j0sm','template_ls2l7zq',e.target,'oPKf7ds0EAMHvJcM-')
+    .then((result) => {
+      alert('Message sent Successfully');
+      e.target.reset();
+    }, (error) => {
+      alert('Error in sending message');
+    });
+  }
   return (
     <div className='w-full'>
         
@@ -100,6 +110,7 @@ const Firstfooter = () => {
               </div>
               <div className=' flex  justify-center  w-[100%] h-[85%] '>
                 <div className='w-[45%] h-[100%]  flex flex-col gap-5'>
+                  <form  onSubmit={(e)=>handlecontectus(e)} className=' flex flex-col gap-5' method='post'>
                     <h1 className='text-[4.7vh] font-semibold'>
                     Message us
                     </h1>
@@ -107,18 +118,19 @@ const Firstfooter = () => {
                     Feel free to reach out using the form below, and we’ll get back to you as soon as possible.
                     </p>
                     <h1 className='text-[2.6vh] font-semibold'>Your name*</h1>
-                    <input type="text" className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
+                    <input type="text" name='name' className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
                     <h1 className='text-[2.6vh] font-semibold'>Email address*</h1>
-                    <input type="text" className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
+                    <input type="text" name='email_form' className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
                     <h1 className='text-[2.6vh] font-semibold'>Comapany name*</h1>
-                    <input type="text" className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
+                    <input type="text" name='company_name' className='border p-4 outline-none border-gray-300 bg-white w-[100%]'/>
                     <h1 className='text-[2.6vh] font-semibold'>Tell us what you need or ask anything that's on your mind.*</h1>
                     {/* <input type="textarea" className='border p-4 outline-none border-gray-300 bg-white  w-[100%]'/> */}
-                    <textarea  className='border p-4 outline-none border-gray-300 bg-white h-[200px] w-[100%]'></textarea>
+                    <textarea  name='message' className='border p-4 outline-none border-gray-300 bg-white h-[200px] w-[100%]'></textarea>
                     <p className='text-[2.2vh] leading-loose '>
                     By sending a message you allow Pragmatic Coders Sp. z o.o., with its registered office in Poland, Kraków (31-323), ul. Opolska 100, to process your personal data provided by you in the contact form for the purpose of contacting you and providing you with the information you requested. You can withdraw your consent at any time. For more information on data processing and the data controller please refer to our <span className='cursor-pointer text-[#019E6D]'>Privacy Policy</span> and <span className='text-[#019E6D] cursor-pointer'>Terms of Use</span>.
                     </p>
                     <button className=' mt-3  uppercase hover:bg-[#008057]  bg-[#019E6D] outline-none cursor-pointer text-white text-[2.4vh] font-semibold p-4 text-center w-[160px]'>send form</button>
+                    </form>
                 </div>
                 <div className='ml-10  w-[40%] h-[100%]  flex flex-col gap-20'>
                 <div className='flex flex-col gap-5'>
