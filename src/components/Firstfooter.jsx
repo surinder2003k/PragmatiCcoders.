@@ -63,7 +63,7 @@ const Firstfooter = () => {
       <div className='w-[82%] h-[13vh]  flex justify-between items-center'>
             <h1 className='home7btn uppercase bg-[#019E6D]  cursor-pointer  text-center font-semibold px-4 py-4.5 text-white text-[2.7vh] w-[300px]'>Bussiness Consulting</h1>
             <h1 className='home7btn uppercase bg-[#019E6D]  cursor-pointer  text-center font-semibold px-4 py-4.5 text-white text-[2.7vh] w-[230px]'>Product Design</h1>
-            <h1 className='home7btn uppercase bg-[#019E6D]  cursor-pointer  text-center font-semibold px-4 py-4.5 text-white text-[2.7vh] w-[270px]'>Software development</h1>
+            <h1 className='home7btn uppercase bg-[#019E6D]  cursor-pointer  text-center font-semibold px-2 py-4.5 text-white text-[2.7vh] w-[270px]'>Software development</h1>
             <h1 className='home7btn uppercase bg-[#019E6D]  cursor-pointer text-center font-semibold px-4 py-4.5 text-white text-[2.7vh] w-[230px]'>IT outsourcing</h1>
             
       </div>
@@ -93,7 +93,7 @@ const Firstfooter = () => {
                             <h1 className='text-[3.3vh] font-semibold'>
                             Atom - an entirely new, remote team for the UK’s first fully digital bank
                             </h1>
-                            <h1 className='home8btn    cursor-pointer uppercase w-[265px] text-center py-3 px-5  text-[3vh] border-2  text-green-600 border-green-600'>
+                            <h1 className='home8btn    cursor-pointer uppercase w-[265px] text-center py-3 px-2  text-[3vh] border-2  text-green-600 border-green-600'>
                               read the case study
                             </h1>
                           </div>
