@@ -1,19 +1,34 @@
 import React from 'react'
 import emailjs from '@emailjs/browser'
 const Firstfooter = () => {
-  function handlecontectus(e){
-    e.preventDefault()
-    const publicKey = process.env.PUBLIC_KEY;
-    const serviceID = process.env.SERVICE_ID;
-    const templateID = process.env.TEMPLATE_ID;
-    emailjs.sendForm(serviceID,templateID,e.target,publicKey)
-    .then((result) => {
-      alert('Message sent Successfully');
-      e.target.reset();
-    }, (error) => {
-      alert('Error in sending message');
-    });
-  }
+  const [result, setResult] = React.useState("");
+
+  async function handlecontectus(event){
+    event.preventDefault()
+    
+    
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "b71b812f-89d5-4635-ac25-e5291ea8bc3d");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };
+  
   return (
     <div className='w-full'>
         
@@ -113,7 +128,7 @@ const Firstfooter = () => {
               </div>
               <div className=' flex  justify-center  w-[100%] h-[85%] '>
                 <div className='w-[45%] h-[100%]  flex flex-col gap-5'>
-                  <form  onSubmit={(e)=>handlecontectus(e)} className=' flex flex-col gap-5' method='post'>
+                  <form  onSubmit={(e)=>handlecontectus(e)}  className=' flex flex-col gap-5' >
                     <h1 className='text-[4.7vh] font-semibold'>
                     Message us
                     </h1>
